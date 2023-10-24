@@ -1,4 +1,9 @@
 provider "aws" {
+assume_role {
+    role_arn     = "arn:aws:iam::441251217006:role/EC2_ADMIN"
+    session_name = "SESSION_NAME"
+    external_id  = "EXTERNAL_ID"
+  }
   region = var.aws_region
 }
 
